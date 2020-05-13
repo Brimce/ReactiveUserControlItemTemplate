@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Reactive User Control with api</Name>
+    <Description>Create a reactive UserControl from ReactiveUI with api structure</Description>
+    <Icon>reactiveUI.ico</Icon>
+    <TemplateID>Microsoft.CSharp.WPF.ReactiveUserControlWithApi</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <AppliesTo>CSharp + WPF</AppliesTo>
+    <RequiredFrameworkVersion>3.0</RequiredFrameworkVersion>
+    <DefaultName>ReactiveUserControlWithApi.xaml</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xaml</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>WindowsBase</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>PresentationCore</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>PresentationFramework</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" SubType="UserControl" CustomTool="MSBuild:Compile" TargetFileName="$fileinputname$\$fileinputname$View.xaml">SampleView.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" SubType="Code" TargetFileName="$fileinputname$\$fileinputname$View.xaml.cs">SampleView.xaml.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" SubType="Code" TargetFileName="$fileinputname$\$fileinputname$VM.cs">SampleVM.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" SubType="Code" TargetFileName="$fileinputname$\Api\I$fileinputname$Api.cs">ISampleApi.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" SubType="Code" TargetFileName="$fileinputname$\Api\$fileinputname$Api.cs">SampleApi.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>
